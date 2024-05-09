@@ -23,15 +23,6 @@ class AnixartDataModel:
         self.rate = rate
 
 
-def send_get_request(url, params=None):
-    response = requests.get(url, params=params)
-    return response
-
-
-def send_post_request(url, params=None, data=None):
-    response = requests.post(url, params=params, data=data)
-    return response
-
 def is_json_key_present(json, key):
     try:
         buf = json[key]
@@ -68,7 +59,6 @@ def search_and_add_to_list(item: AnixartDataModel, token):
     query_params = {
         'size': '30'
     }
-
     headers = {
         "auth": f"{token}",
     }
@@ -76,7 +66,6 @@ def search_and_add_to_list(item: AnixartDataModel, token):
         "query": f"{fix_title(item.anime_orig_title)}"
     }
 
-    # sending post request and saving response as response object
     search_request = requests.post(f"{HIKKA_API}/anime", params=query_params, json=search_data)
 
     json_data = search_request.json()

@@ -21,7 +21,7 @@ git clone https://github.com/MrIkso/anixart2hikka
    
 4. Export bookmarks via parameters in screenshot
 
-    <img src ="img/2.jpg" width="50%" />
+    <img src ="img/3.jpg" width="50%" />
    
 5. Copy exported *.csv file in PC
 
